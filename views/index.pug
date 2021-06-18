@@ -1,0 +1,144 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title This is a food website
+        style 
+            include ../static/style.css 
+        
+       
+    body 
+        header 
+          h1.logo FOOD
+          div(class='menuToggle', onclick='toggleMenu()')
+          ul.navigation 
+          
+            li #[a(href="#banner" onclick="toggleMenu();")  Home]
+            li #[a(href="#about" onclick="toggleMenu();") About]
+            li #[a(href="#menu" onclick="toggleMenu();") Menu]
+            li #[a(href="#expert" onclick="toggleMenu();") Experts]
+            li #[a(href="#testimonial" onclick="toggleMenu();") Testimonial]
+            li #[a(href="#contact" onclick="toggleMenu();") Contact Us]
+
+        section#banner.banner 
+          .content
+             h2 ALWAYS CHOOSE GOOD 
+             p SO DO CHOOSE US!!
+             a(href="#").btn IT'S ALWAYS YOUR FOOD AND YOU
+        section#about.about 
+           .row 
+              .col50 
+               h2 About us 
+               p   We are local food supply store...our cuisines are fingerlicking good..pay us a visit and enjoy your tim here!!
+              .col50 
+                .imgBx
+                   img( src="/static/img1.jpg") 
+        section#menu.menu 
+          .title 
+               h2 Our Menu 
+               p  Here is the list of our special items.Do checkout..
+          .content
+            .box 
+              .imgBx 
+                 img(src="/static/menu1.jpg", alt="") 
+              .text 
+                 h3 Special Salads
+            .box 
+              .imgBx 
+                 img(src="/static/menu2.jpg", alt="") 
+              .text 
+                 h3 Special Soup
+            .box 
+              .imgBx 
+                 img(src="/static/menu3.jpg", alt="") 
+              .text 
+                 h3 Special Pasta
+            .box 
+              .imgBx 
+                 img(src="/static/menu4.jpg", alt="") 
+              .text 
+                 h3 Special Salad
+            .box 
+              .imgBx 
+                 img(src="/static/menu5.jpg", alt="") 
+              .text 
+                 h3 Special Soup
+            .box 
+              .imgBx 
+                 img(src="/static/menu6.jpg", alt="") 
+              .text 
+                 h3 Special Pasta 
+          .title 
+              a(href="#").btn View All 
+        section#expert.expert 
+          .title 
+               h2 Our Kitchen
+               p The people who bring the best to you
+          .content
+            .box 
+              .imgBx 
+                 img(src="/static/expert1.jpg", alt="") 
+              .text 
+                 h3 Jack
+            .box
+              .imgBx 
+                 img(src="/static/expert2.jpg", alt="") 
+              .text 
+                 h3 Ryan
+            .box
+              .imgBx 
+                 img(src="/static/expert3.jpg", alt="") 
+              .text 
+                 h3 Lisa
+            .box
+              .imgBx 
+                 img(src="/static/expert4.jpg", alt="") 
+              .text 
+                 h3 Robert
+        section#testimonial.testimonial 
+          .title 
+               h2 They said about us!!
+              
+          .content
+            .box 
+              .imgBx 
+                 img(src="/static/testi1.jpg", alt="") 
+              .text 
+                 h3 Xi pingso
+                 p Extremely dedicated team of top notch professionals.They will never disappoint you with your food.
+            .box
+              .imgBx 
+                 img(src="/static/testi2.jpg", alt="") 
+              .text 
+                 h3  Albert cliff
+                 p Humble and polite staff who understands the need of customer without fail and give their best.
+            .box
+              .imgBx 
+                 img(src="/static/testi3.jpg", alt="") 
+              .text 
+                 h3 Jacqueline 
+                 p The sole reason for me getting introduced to cuisines around the world,They are exceptional with INDIAN meals.
+        section#contact.contact 
+          .title 
+                 h2 Contact Us
+          .contactform 
+             form(action="/",method="POST", class="myForm") 
+              .inputbox
+                 <input type="text" class= “name” name="name" placeholder="NAME">
+              .inputbox 
+                 <input type="tel"class= “number” name="number" placeholder="NUMBER">
+              .inputbox 
+                 <input type="email" class= “email” name="email" placeholder="EMAIL">
+              .inputbox 
+                 <input type="submit" value="SEND">
+        section#copyright.copyright 
+              .copyrightText 
+                 p Copyright@2021 All rights reserved     
+  
+
+
+                       
+        script 
+              include ../static/script.js 
